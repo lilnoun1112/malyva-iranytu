@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mályvavirág döntési fa prototípus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Interaktív döntési fa prototípus</p>
+        <h1>Miben segíthetünk?</h1>
+        <p class="lead">
+          Ez a prototípus azt mutatja meg, hogyan lehet néhány kontextusfüggő választás után a látogatót a számára releváns Mályvavirág-projektoldalak felé terelni.
+        </p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <section class="card">
+          <div class="section-heading">
+            <p class="eyebrow">Aktuális útvonal</p>
+            <h2>Választások</h2>
+          </div>
+          <ol id="breadcrumb" class="breadcrumb"></ol>
+          <button id="resetBtn" class="ghost-button" type="button">Újrakezdés</button>
+        </section>
+
+        <section class="card" style="display: none;">
+          <div class="section-heading">
+            <p class="eyebrow">Gyors demó</p>
+            <h2>Példaútvonalak</h2>
+          </div>
+          <div id="demoButtons" class="demo-buttons"></div>
+        </section>
+
+        <section class="card muted">
+          <div class="section-heading">
+            <p class="eyebrow">Rétegek</p>
+            <h2>Címkelogika</h2>
+          </div>
+          <div id="layerLegend" class="layer-legend"></div>
+        </section>
+      </aside>
+
+      <section class="workspace">
+        <div id="stepPanel" class="step-panel card"></div>
+        <div id="resultsPanel" class="results-panel"></div>
+      </section>
+    </main>
+
+    <section class="card path-overview" style="display: none;">
+      <details>
+        <summary>Összes döntési útvonal megtekintése</summary>
+        <div id="pathTable" class="path-table-wrap"></div>
+      </details>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
