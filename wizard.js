@@ -149,15 +149,16 @@
     }, "");
   }
 
-  // a nyitott kérdés: a szülő folytatása a "…" helyével; az a(z) a látható opciókhoz igazodik
+  // A nyitott kérdés: a szülő folytatása a "…" előtti részig. Ami a "…" után áll (pl. "esetében"),
+  // csak a választás után jelenik meg, így a mondat végén sosem marad lyuk.
+  // Az "a(z)" a látható opciókhoz igazodik; ha vegyesen kellene "a" és "az", elhagyjuk.
   function openPrompt(node, kids) {
-    let prompt = node.prompt || "";
-    if (prompt.includes(ARTICLE)) {
+    let before = (node.prompt || "").split(SLOT)[0];
+    if (before.includes(ARTICLE)) {
       const arts = new Set(kids.filter(k => !k.sentence).map(k => articleFor(fragmentOf(k))));
-      prompt = prompt.replace(ARTICLE, arts.size === 1 ? [...arts][0] : ARTICLE);
+      before = before.replace(arts.size === 1 ? ARTICLE : new RegExp("\\s*" + ARTICLE.replace(/[()]/g, "\\$&")), arts.size === 1 ? [...arts][0] : "");
     }
-    const i = prompt.indexOf(SLOT);
-    return i < 0 ? { before: prompt, after: "" } : { before: prompt.slice(0, i), after: prompt.slice(i + SLOT.length) };
+    return before.replace(/\s+$/, "");
   }
 
   /* ---------- Állapot ---------- */
@@ -203,11 +204,10 @@
       parent = n;
     });
     if (kids.length) {
-      const { before, after } = openPrompt(node, kids);
+      const before = openPrompt(node, kids);
       if (before && !startsWithPunct(before)) out.push(" ");
-      out.push(h("span", { class: "seg seg-open" }, before.replace(/\s+$/, "")),
+      out.push(h("span", { class: "seg seg-open" }, before),
         h("span", { class: "slot", "aria-hidden": "true" }, "…"));
-      if (after) out.push(h("span", { class: "seg seg-open" }, after));
     } else {
       out.push(".");
     }

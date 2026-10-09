@@ -20,13 +20,13 @@ szures-mehnyak,szuresek,Méhnyakszűrés,méhnyakszűrésről,,,StopHPV | https:
 szures-emlo,szuresek,Emlőszűrés,emlőszűrésről,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/tunetek-mammografia-eredmenye,,,,,
 szures-egyeb,szuresek,Egyéb szűrések,egyéb szűrésekről,,,StopHPV,Fej-nyakibetegút | https://fejnyakidaganatok.hu/szuresek.html,,,,StopHPV: lesz majd egy külön cikk
 oltas,megelozes,HPV elleni védőoltásról,,,,StopHPV | https://stophpv.hu/temakor/mindent-a-hpv-elleni-vedooltasrol,Oltási kiadvány,,,,
-rakmegelozo,start,Rákmegelőző állapotokról,,,", azon belül is a(z) … érintőkről",,,,,,
-rm-szeremtest,rakmegelozo,Szeméremtest,szeméremtestet,,,Mályvabetegút | https://malyvabetegut.hu/szemeremtestrak-betegut/kivizsgalas-diagnozis,StopHPV | https://stophpv.hu/elvaltozasok/rakmegelozo-allapotok,,,,
-rm-emlo,rakmegelozo,Emlő,emlőt,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/diagnozis,,,,,
-rm-egyeb,rakmegelozo,Egyéb szervek,egyéb szerveket,,,StopHPV | https://stophpv.hu/elvaltozasok/rakmegelozo-allapotok,,,,,
+rakmegelozo,start,Rákmegelőző állapotokról,,,", azon belül is a(z) …",,,,,,
+rm-szeremtest,rakmegelozo,Szeméremtest,szeméremtestet érintőkről,,,Mályvabetegút | https://malyvabetegut.hu/szemeremtestrak-betegut/kivizsgalas-diagnozis,StopHPV | https://stophpv.hu/elvaltozasok/rakmegelozo-allapotok,,,,
+rm-emlo,rakmegelozo,Emlő,emlőt érintőkről,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/diagnozis,,,,,
+rm-egyeb,rakmegelozo,Egyéb szervek,egyéb szerveket érintőkről,,,StopHPV | https://stophpv.hu/elvaltozasok/rakmegelozo-allapotok,,,,,
 rm-konizacio,rakmegelozo,Konizáció előtt állok,,", mert konizáció előtt állok",,Konizációs kiadvány,Mályvabetegút | https://malyvabetegut.hu/mehnyakrak-betegut/kivizsgalas-diagnozis,,,,
 daganat,start,Daganatos betegségekről,,,", azon belül is a(z) …",,,,,,
-tunetek,daganat,Tünetekről,,,", a(z) … esetében",,,,,,
+tunetek,daganat,Tünetekről,,,", konkrétan a(z) … esetében",,,,,,
 tunetek-mehnyak,tunetek,Méhnyakrák,,,,Mályvabetegút,,,,,
 tunetek-petefeszek,tunetek,Petefészekrák,,,,Felfedezni,Mályvabetegút,,,,
 tunetek-mehtest,tunetek,Méhtestrák,,,,Mályvabetegút,,,,,
@@ -34,7 +34,7 @@ tunetek-huvely,tunetek,Hüvelyrák,,,,Mályvabetegút,,,,,
 tunetek-szeremtest,tunetek,Szeméremtestrák,,,,Mályvabetegút,,,,,
 tunetek-emlo,tunetek,Emlőrák,,,,Emlőrákbetegút,,,,feltételezett,"Címke a táblázatban hiányzik, a sorrend alapján"
 tunetek-fejnyak,tunetek,Fej-nyaki daganatok,,,,Fej-nyakibetegút,,,,feltételezett,"Címke a táblázatban hiányzik, a sorrend alapján"
-kivizsgalas,daganat,Kivizsgálásról,,,", a(z) … esetében",,,,,,
+kivizsgalas,daganat,Kivizsgálásról,,,", konkrétan a(z) … esetében",,,,,,
 kivizsgalas-mehnyak,kivizsgalas,Méhnyakrák,,,,Mályvabetegút,,,,,
 kivizsgalas-petefeszek,kivizsgalas,Petefészekrák,,,,Mályvabetegút,,,,,
 kivizsgalas-mehtest,kivizsgalas,Méhtestrák,,,,Mályvabetegút,,,,,
@@ -42,7 +42,7 @@ kivizsgalas-huvely,kivizsgalas,Hüvelyrák,,,,Mályvabetegút,,,,,
 kivizsgalas-szeremtest,kivizsgalas,Szeméremtestrák,,,,Mályvabetegút,,,,,
 kivizsgalas-emlo,kivizsgalas,Emlőrák,,,,Emlőrákbetegút,,,,feltételezett,"Címke a táblázatban hiányzik, a sorrend alapján"
 kivizsgalas-fejnyak,kivizsgalas,Fej-nyaki daganatok,,,,Fej-nyakibetegút,,,,feltételezett,"Címke a táblázatban hiányzik, a sorrend alapján"
-betegutkiseret,daganat,Betegútkíséretről,,,", a(z) … esetében",,,,,feltételezett,"A táblázat 50–60. sora: a B-címke csak a 60. sorban szerepel, a megjegyzés szerint ide tartozik"
+betegutkiseret,daganat,Betegútkíséretről,,,", konkrétan a(z) … esetében",,,,,feltételezett,"A táblázat 50–60. sora: a B-címke csak a 60. sorban szerepel, a megjegyzés szerint ide tartozik"
 kiseret-mehnyak,betegutkiseret,Méhnyakrák,,,,Mályvabetegút,Mályva Útitárs,,,feltételezett,
 kiseret-petefeszek,betegutkiseret,Petefészekrák,,,,Mályvabetegút,Mályva Útitárs,,,feltételezett,
 kiseret-mehtest,betegutkiseret,Méhtestrák,,,,Mályvabetegút,Mályva Útitárs,,,feltételezett,
@@ -50,23 +50,23 @@ kiseret-huvely,betegutkiseret,Hüvelyrák,,,,Mályvabetegút,Mályva Útitárs,,
 kiseret-szeremtest,betegutkiseret,Szeméremtestrák,,,,Mályvabetegút,Mályva Útitárs,,,feltételezett,
 kiseret-emlo,betegutkiseret,Emlőrák,,,,Emlőrákbetegút,Mályva Útitárs,,,feltételezett,
 kiseret-fejnyak,betegutkiseret,Fej-nyaki daganatok,,,,Fej-nyakibetegút,Mályva Útitárs,,,feltételezett,
-prehab,daganat,Műtét előtti felkészülésről,,,", a(z) … esetében",,,,,,Táblázatban: Felkészülés műtétre / prehabilitáció
+prehab,daganat,Műtét előtti felkészülésről,,,", konkrétan a(z) … esetében",,,,,,Táblázatban: Felkészülés műtétre / prehabilitáció
 prehab-noi,prehab,Nőgyógyászati daganatok,,,,NOPREM,,,,,
 prehab-emlo,prehab,Emlőrák,,,,Prehabilitációs videó,,,,,
-rehab,daganat,Rehabilitációról,,,", a(z) … esetében",,,,,,
+rehab,daganat,Rehabilitációról,,,", konkrétan a(z) … esetében",,,,,,
 rehab-noi,rehab,Nőgyógyászati daganatok,,,,Mályvabetegút,Mályva Útitárs,,,feltételezett,"Szét kell bontani 5 daganattípusra, mindenhova az adott rehab részt belinkelni"
 rehab-emlo,rehab,Emlőrák,,,,Emlőrákbetegút,Mályva Útitárs,,,feltételezett,"Szét kell bontani: női, férfi, várandós"
 rehab-fejnyak,rehab,Fej-nyaki daganatok,,,,Fej-nyakibetegút,Mályva Útitárs,,,feltételezett,"Szét kell bontani 6 részre, mindenhova az adott rehab részt belinkelni"
 rehab-egyeb,rehab,Egyéb daganatok,,,,Mályva Útitárs,,,,feltételezett,
-szexualis,daganat,Szexuális egészségről,,,", a(z) … esetében",,,,,feltételezett,"A táblázat 78–79. sora, B-címke nélkül"
+szexualis,daganat,Szexuális egészségről,,,", konkrétan a(z) … esetében",,,,,feltételezett,"A táblázat 78–79. sora, B-címke nélkül"
 szex-noi,szexualis,Nőgyógyászati daganatok,,,,Szexuális egészség,Mályvabetegút,Mályva Útitárs,Webshop,feltételezett,
 szex-emlo,szexualis,Emlőrák,,,,Emlőrákbetegút,Mályva Útitárs,,,feltételezett,
-lelki,daganat,Lelki támogatásról,,,", a(z) … esetében",,,,,feltételezett,"A táblázat 82–85. sora, B-címke nélkül"
+lelki,daganat,Lelki támogatásról,,,", konkrétan a(z) … esetében",,,,,feltételezett,"A táblázat 82–85. sora, B-címke nélkül"
 lelki-noi,lelki,Nőgyógyászati daganatok,,,,Lelkemnek,Mályvabetegút,Mályva Útitárs,,feltételezett,
 lelki-emlo,lelki,Emlőrák,,,,Lelkemnek,Emlőrákbetegút,Mályva Útitárs,,feltételezett,Táblázatban: Lelkemnek emlő
 lelki-fejnyak,lelki,Fej-nyaki daganatok,,,,Fej-nyakibetegút,Mályva Útitárs,,,feltételezett,
 lelki-egyeb,lelki,Egyéb daganatok,,,,Mályvavirág Alapítvány,,,,feltételezett,Táblázatban: Honlapon az adott link
-mindennapok,daganat,Mindennapi életről,,,", a(z) … esetében",,,,,feltételezett,"A táblázat 88–90. sora, B-címke nélkül; a téma neve teljesen feltételezett"
+mindennapok,daganat,Mindennapi életről,,,", konkrétan a(z) … esetében",,,,,feltételezett,"A táblázat 88–90. sora, B-címke nélkül; a téma neve teljesen feltételezett"
 mindennap-emlo,mindennapok,Emlőrák,,,,Emlőrákbetegút,Mályva Útitárs,,,feltételezett,
 mindennap-fejnyak,mindennapok,Fej-nyaki daganatok,,,,Fej-nyakibetegút,Mályva Útitárs,,,feltételezett,
 mindennap-egyeb,mindennapok,Egyéb daganatok,,,,Mályva Útitárs,,,,feltételezett,
