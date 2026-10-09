@@ -3,22 +3,22 @@ start,,,,"Azért látogattam az oldalra, mert",többet szeretnék tudni a(z) …
 megelozes,start,Megelőzésről,,,", azon belül is a(z) …",,,,,,"Táblázatban: HPV, szűrés, oltás"
 hpv,megelozes,HPV-ről,,,", leginkább …",,,,,,Táblázatban: HPV-információ
 hpv-altalanos,hpv,Általánosságban,,,,StopHPV,,,,,
-hpv-elvaltozasok,hpv,HPV okozta elváltozások,a HPV okozta elváltozásokról és betegségekről,,,StopHPV | https://stophpv.hu/temakor/hpv-okozta-elvaltozasok-betegsegek,Kardvirág,,,,
-hpv-szemolcs,hpv,Nemi szervi szemölcsök,a nemi szervi szemölcsökről,,,StopHPV,,,,,
-hpv-fejnyak,hpv,Fej-nyaki daganatok,a HPV okozta fej-nyaki daganatokról,,,Kardvirág,Fej-nyakibetegút,StopHPV,,feltételezett,A táblázat 23. sorában címke nélkül szerepel
+hpv-elvaltozasok,hpv,HPV okozta elváltozásokról,a HPV okozta elváltozásokról,,,StopHPV | https://stophpv.hu/temakor/hpv-okozta-elvaltozasok-betegsegek,Kardvirág,,,,
+hpv-szemolcs,hpv,Nemi szervi szemölcsökről,a nemi szervi szemölcsökről,,,StopHPV,,,,,
+hpv-fejnyak,hpv,HPV okozta fej-nyaki daganatokról,a HPV okozta fej-nyaki daganatokról,,,Kardvirág,Fej-nyakibetegút,StopHPV,,feltételezett,A táblázat 23. sorában címke nélkül szerepel
 hpv-ferfi,hpv,Férfiként,,,,Kardvirág,StopHPV,,,,
 hpv-tini,hpv,Tiniként,,,,Mályva Tinik,StopHPV,,,,
 hpv-szulo,hpv,Szülőként,,,,Mályva Tinik,StopHPV,,,,
 hpv-pedagogus,hpv,"Pedagógusként, védőnőként",,,,Mályva Tinik,StopHPV,Cooltas prezentáció,,,
 hpv-pozitivitas,megelozes,HPV-pozitivitásról,,,,StopHPV | https://stophpv.hu/hpv-pozitivitas,,,,,
-szuresi-eredmenyek,megelozes,Szűrési eredményekről,,,", pontosabban a(z) … eredményéről",,,,,,
-eredmeny-citologia,szuresi-eredmenyek,Citológia,citológiai vizsgálat,,,StopHPV | https://stophpv.hu/mindent-a-citologiarol/citologiai-eredmenyek,,,,,
-eredmeny-hpv-teszt,szuresi-eredmenyek,HPV-teszt,,,,StopHPV | https://stophpv.hu/mindent-a-hpv-tesztelesrol/hpv-teszt-eredmenyek,,,,,
-eredmeny-emlo,szuresi-eredmenyek,Emlőszűrés,,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/tunetek-mammografia-eredmenye,,,,,
-szuresek,megelozes,Szűrésekről,,,", pontosabban a(z) …",,,,,,
-szures-mehnyak,szuresek,Méhnyakszűrés,méhnyakszűrésről,,,StopHPV | https://stophpv.hu/temakor/szuresek,,,,,
-szures-emlo,szuresek,Emlőszűrés,emlőszűrésről,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/tunetek-mammografia-eredmenye,,,,,
-szures-egyeb,szuresek,Egyéb szűrések,egyéb szűrésekről,,,StopHPV,Fej-nyakibetegút | https://fejnyakidaganatok.hu/szuresek.html,,,,StopHPV: lesz majd egy külön cikk
+szuresi-eredmenyek,megelozes,Szűrési eredményekről,,,", pontosabban …",,,,,,
+eredmeny-citologia,szuresi-eredmenyek,Citológiai vizsgálat eredményéről,a citológiai vizsgálat eredményéről,,,StopHPV | https://stophpv.hu/mindent-a-citologiarol/citologiai-eredmenyek,,,,,
+eredmeny-hpv-teszt,szuresi-eredmenyek,HPV-teszt eredményéről,a HPV-teszt eredményéről,,,StopHPV | https://stophpv.hu/mindent-a-hpv-tesztelesrol/hpv-teszt-eredmenyek,,,,,
+eredmeny-emlo,szuresi-eredmenyek,Emlőszűrés eredményéről,az emlőszűrés eredményéről,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/tunetek-mammografia-eredmenye,,,,,
+szuresek,megelozes,Szűrésekről,,,", pontosabban …",,,,,,
+szures-mehnyak,szuresek,Méhnyakszűrésről,a méhnyakszűrésről,,,StopHPV | https://stophpv.hu/temakor/szuresek,,,,,
+szures-emlo,szuresek,Emlőszűrésről,az emlőszűrésről,,,Emlőrákbetegút | https://emlorakbetegut.hu/emlorak-betegut-noknek/tunetek-mammografia-eredmenye,,,,,
+szures-egyeb,szuresek,Egyéb szűrésekről,az egyéb szűrésekről,,,StopHPV,Fej-nyakibetegút | https://fejnyakidaganatok.hu/szuresek.html,,,,StopHPV: lesz majd egy külön cikk
 oltas,megelozes,HPV elleni védőoltásról,,,,StopHPV | https://stophpv.hu/temakor/mindent-a-hpv-elleni-vedooltasrol,Oltási kiadvány,,,,
 rakmegelozo,start,Rákmegelőző állapotokról,,,", azon belül is a(z) …",,,,,,
 rm-szeremtest,rakmegelozo,Szeméremtest,szeméremtestet érintőkről,,,Mályvabetegút | https://malyvabetegut.hu/szemeremtestrak-betegut/kivizsgalas-diagnozis,StopHPV | https://stophpv.hu/elvaltozasok/rakmegelozo-allapotok,,,,
