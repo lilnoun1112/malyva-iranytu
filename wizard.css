@@ -1,0 +1,246 @@
+/* Elrendezés: középre zárt bevezető, alatta a bordó "recepciós pult" kártya, amelyben a mondat épül.
+   Egyetlen, a dizájnhoz kötött világos téma. */
+:root {
+  --paper: #ffffff;
+  --wine-900: #4f0420;
+  --wine-800: #62072a;
+  --wine-700: #7a0d36;
+  --wine-500: #9c1a4a;
+  --mauve: #b87a92;
+  --blush: #fdeaf0;
+  --blush-strong: #ffffff;
+  --ink-soft: #7a2a48;
+  --on-wine: #ffffff;
+  --on-wine-muted: rgba(255, 236, 243, 0.72);
+
+  --font-display: "Lora", Georgia, "Times New Roman", serif;
+  --font-body: "Open Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+
+  --radius-card: 22px;
+  --radius-pill: 999px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html, body { margin: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--wine-800);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-inline: 16px;
+  padding-block: clamp(32px, 7vw, 72px) 64px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4vw, 44px);
+}
+
+/* ---------- Bevezető ---------- */
+
+.intro { text-align: center; display: grid; gap: 20px; justify-items: center; }
+.intro h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.75rem, 3.4vw, 2.4rem);
+  line-height: 1.2;
+  color: var(--wine-800);
+}
+.intro p { margin: 0; max-width: 62ch; font-size: clamp(1rem, 1.5vw, 1.2rem); color: var(--wine-700); text-wrap: balance; }
+
+/* ---------- Iránytű kártya ---------- */
+
+.iranytu {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+  padding: clamp(24px, 4vw, 40px) clamp(18px, 5vw, 64px) clamp(28px, 4vw, 44px);
+  color: var(--on-wine);
+  background:
+    radial-gradient(60% 90% at 6% 110%, rgba(184, 122, 146, 0.55), transparent 60%),
+    radial-gradient(45% 80% at 92% 0%, rgba(166, 28, 78, 0.85), transparent 70%),
+    linear-gradient(100deg, var(--wine-800) 0%, var(--wine-900) 45%, var(--wine-700) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.sentence {
+  margin: 0;
+  max-width: 34em;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.35rem, 2.6vw, 2.05rem);
+  line-height: 1.35;
+  text-align: center;
+  text-wrap: balance;
+}
+.sentence.pulse { animation: settle 0.45s ease-out; }
+
+.seg-chosen { cursor: pointer; border-radius: 4px; transition: color 0.2s; }
+.seg-chosen .pick {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 220, 232, 0.5);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
+  transition: text-decoration-color 0.2s;
+}
+.seg-chosen:hover { color: var(--blush); }
+.seg-chosen:hover .pick { text-decoration-color: var(--blush); }
+.seg-chosen:focus-visible { outline: 2px solid var(--blush); outline-offset: 3px; }
+.seg-open { color: var(--on-wine); }
+.slot { display: inline-block; color: var(--on-wine); }
+
+/* ---------- Gombok ---------- */
+
+.options {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 14px 30px;
+  max-width: 100%;
+}
+.option { margin-top: var(--dy, 0px); }
+.option.enter { animation: rise 0.42s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i) * 55ms); }
+
+.pill {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(0.95rem, 1.35vw, 1.1rem);
+  color: var(--wine-800);
+  background: var(--blush);
+  border: 0;
+  border-radius: var(--radius-pill);
+  padding: 0.6em 1.25em;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(255, 196, 216, 0.35), 0 1px 2px rgba(40, 0, 15, 0.25);
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+.pill:hover { background: var(--blush-strong); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(255, 196, 216, 0.5), 0 1px 2px rgba(40, 0, 15, 0.25); }
+.pill:active { transform: translateY(0); }
+.pill:focus-visible { outline: 3px solid var(--blush); outline-offset: 3px; }
+
+/* ---------- Ajánlások ---------- */
+
+.results { width: 100%; display: grid; gap: 14px; }
+.results-lead { margin: 0; text-align: center; color: var(--on-wine-muted); font-size: 0.98rem; }
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 300px));
+  justify-content: center;
+  gap: 16px;
+}
+.card {
+  background: var(--paper);
+  color: var(--wine-800);
+  border-radius: 16px;
+  padding: 18px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  box-shadow: 0 10px 30px rgba(30, 0, 12, 0.25);
+}
+.card.enter { animation: rise 0.45s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(120ms + var(--i) * 80ms); }
+.card-type { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mauve); }
+.card-name { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; line-height: 1.25; }
+.card-summary { margin: 0; font-size: 0.92rem; color: var(--ink-soft); flex: 1; }
+.card-link { margin-top: 6px; font-weight: 600; color: var(--wine-500); text-decoration: none; }
+.card-link:hover { text-decoration: underline; }
+.card-link.is-missing { color: var(--mauve); font-weight: 400; font-style: italic; }
+
+/* ---------- Vezérlők ---------- */
+
+.controls { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.ctl {
+  font: 600 0.9rem/1 var(--font-body);
+  color: var(--on-wine);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 230, 238, 0.35);
+  border-radius: var(--radius-pill);
+  padding: 0.6em 1.1em;
+  cursor: pointer;
+}
+.ctl:hover { background: rgba(255, 255, 255, 0.16); }
+.ctl:focus-visible { outline: 2px solid var(--blush); outline-offset: 2px; }
+.ctl-dark { color: var(--wine-800); background: var(--blush); border-color: transparent; }
+.ctl-dark:hover, .ctl-dark[aria-pressed="true"] { background: var(--wine-800); color: var(--on-wine); }
+
+.proto-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--mauve);
+  margin-top: -16px;
+}
+
+/* ---------- Szerkesztői nézet ---------- */
+
+body.editing .is-placeholder.pill,
+body.editing .card.is-placeholder { outline: 2px dashed var(--mauve); outline-offset: 3px; }
+
+.editor { display: grid; gap: 18px; color: var(--wine-800); }
+.ed-head h2 { margin: 0 0 4px; font-family: var(--font-display); font-weight: 600; font-size: 1.6rem; }
+.ed-head p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+.ed-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 18px; }
+.ed-box { border: 1px solid #f0d6e0; border-radius: 14px; padding: 18px 20px; min-width: 0; }
+.ed-box h3 { margin: 0 0 8px; font-size: 1rem; }
+.ed-box p { margin: 0 0 10px; font-size: 0.9rem; color: var(--ink-soft); }
+.drop {
+  display: block;
+  border: 2px dashed var(--mauve);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+.drop input { display: block; margin: 10px auto 0; max-width: 100%; font-size: 0.85rem; }
+.warn { margin: 0; padding-left: 18px; font-size: 0.88rem; max-height: 220px; overflow: auto; }
+.ed-error { margin: 0; padding: 10px 14px; background: var(--blush); border-radius: 10px; font-weight: 600; }
+
+.all { margin: 0; padding-left: 26px; display: grid; gap: 10px; font-size: 0.92rem; }
+.all li { padding-left: 4px; }
+.all li.is-placeholder .jump { text-decoration: underline dashed var(--mauve); text-underline-offset: 3px; }
+.jump { font: inherit; text-align: left; color: var(--wine-800); background: none; border: 0; padding: 0; cursor: pointer; }
+.jump:hover { color: var(--wine-500); }
+.recs { display: block; font-size: 0.8rem; font-weight: 600; color: var(--mauve); }
+.note { display: block; font-size: 0.8rem; color: var(--ink-soft); font-style: italic; }
+
+/* ---------- Mozgás ---------- */
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes settle { from { opacity: 0.55; } to { opacity: 1; } }
+
+@media (max-width: 640px) {
+  .option { margin-top: 0; }
+  .options { gap: 10px; padding-bottom: 0; }
+  .proto-bar { margin-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option.enter, .card.enter, .sentence.pulse { animation: none; }
+  .pill, .seg-chosen, .pick { transition: none; }
+}

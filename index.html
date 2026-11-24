@@ -2,64 +2,39 @@
 <html lang="hu">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mályvavirág döntési fa prototípus</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mályvavirág iránytű</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Open+Sans:wght@400;600&display=swap">
+  <link rel="stylesheet" href="wizard.css">
 </head>
 <body>
-  <div class="app-shell">
-    <header class="hero">
-      <div>
-        <p class="eyebrow">Interaktív döntési fa prototípus</p>
-        <h1>Miben segíthetünk?</h1>
-        <p class="lead">
-          Ez a prototípus azt mutatja meg, hogyan lehet néhány kontextusfüggő választás után a látogatót a számára releváns Mályvavirág-projektoldalak felé terelni.
-        </p>
-      </div>
-    </header>
-
-    <main class="layout">
-      <aside class="sidebar">
-        <section class="card">
-          <div class="section-heading">
-            <p class="eyebrow">Aktuális útvonal</p>
-            <h2>Választások</h2>
-          </div>
-          <ol id="breadcrumb" class="breadcrumb"></ol>
-          <button id="resetBtn" class="ghost-button" type="button">Újrakezdés</button>
-        </section>
-
-        <section class="card" style="display: none;">
-          <div class="section-heading">
-            <p class="eyebrow">Gyors demó</p>
-            <h2>Példaútvonalak</h2>
-          </div>
-          <div id="demoButtons" class="demo-buttons"></div>
-        </section>
-
-        <section class="card muted">
-          <div class="section-heading">
-            <p class="eyebrow">Rétegek</p>
-            <h2>Címkelogika</h2>
-          </div>
-          <div id="layerLegend" class="layer-legend"></div>
-        </section>
-      </aside>
-
-      <section class="workspace">
-        <div id="stepPanel" class="step-panel card"></div>
-        <div id="resultsPanel" class="results-panel"></div>
-      </section>
-    </main>
-
-    <section class="card path-overview" style="display: none;">
-      <details>
-        <summary>Összes döntési útvonal megtekintése</summary>
-        <div id="pathTable" class="path-table-wrap"></div>
-      </details>
+  <main class="page">
+    <section class="intro" aria-labelledby="introTitle">
+      <h2 id="introTitle">Miben segíthetünk?</h2>
+      <p>Ha nem tudod pontosan, merre indulj tovább, akkor válaszolj néhány kérdésünkre, így könnyebben megtalálod a számodra fontos információkat az oldalainkon.</p>
     </section>
-  </div>
 
-  <script src="app.js"></script>
+    <section class="iranytu" id="iranytu" aria-label="Iránytű">
+      <h3 class="sentence" id="sentence" aria-live="polite">Betöltés…</h3>
+      <ul class="options" id="options"></ul>
+      <div class="results" id="results" hidden></div>
+      <div class="controls" id="controls" hidden>
+        <button type="button" class="ctl" id="backBtn"><span aria-hidden="true">←</span> Vissza</button>
+        <button type="button" class="ctl" id="resetBtn">Újrakezdem</button>
+      </div>
+    </section>
+
+    <div class="proto-bar">
+      <span>Prototípus · a mondat bármelyik kiválasztott részére kattintva visszaléphetsz</span>
+      <button type="button" class="ctl ctl-dark" id="editorToggle" aria-pressed="false">Szerkesztői nézet</button>
+    </div>
+
+    <section class="editor" id="editor" hidden></section>
+  </main>
+
+  <script src="data/fallback.js"></script>
+  <script src="wizard.js"></script>
 </body>
 </html>
