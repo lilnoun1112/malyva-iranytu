@@ -56,14 +56,18 @@ Ha egy ajánlásnak nincs URL-je, a kártyán „Link hamarosan” jelenik meg.
 
 Futtasd: `node tools/build-fallback.mjs`. Ez frissíti a `data/fallback.js`-t a dupla kattintásos megnyitáshoz. Szerverről futtatva erre nincs szükség.
 
-## Ami a forrástáblázatból még hiányzik
+## Forrás és szabályok
 
-Ezeket a fában `feltételezett`-ként jelöltem; a szerkesztői nézet listázza őket.
+Forrás: `malyvavirag_dontesi_fa_freshest.xlsx`. Minden sor `megjegyzes` oszlopa megadja, melyik cellából jön.
 
-- **Hiányzó B/C-címkék** (sorok 40–41, 48–60, 66–69, 78–90): a sorrend és az ajánlások alapján kitalált címkék. Ilyen az Emlőrák, a Fej-nyaki daganatok, a Betegútkíséret, a Szexuális egészség, a Lelki támogatás és a Mindennapi élet.
-- **„Érdeklődő vagyok”**: csak a dizájnban szerepel. Ideiglenesen egy végpont.
-- **Projekt-URL-ek és leírások**: URL csak ott van, ahol a táblázat megadta. A leírások ideiglenes szövegek.
-- **Kimaradt**:
-  - a 13. sor (címke nélküli Kardvirág-ajánlás a szűrési eredmények alatt);
-  - a táblázat személyes ágai: a HPV-n belüli személyes szálak (férfi, tini, szülő, pedagógus) a B és a C szinten is szerepeltek, ezeket egyszer, a HPV alatt vettem fel.
-- **Szétbontandó ágak** (rehabilitáció): a táblázat jegyzetei a `megjegyzes` oszlopban vannak.
+- A címkék a táblázatból jönnek. Csak a mondathoz szükséges nyelvtani alak változik, például *Petefészek → Petefészekrákról* vagy *Férfi vagyok → Férfiként*.
+- A cellamegjegyzéseket követjük: *A2 → Megelőzés*, a *Betegútkíséret* a Daganatos betegségek alá kerül (A60), a *Hozzátartozó* ág szerkezete az A91 megjegyzéséből jön.
+- A címke nélküli sorok kimaradnak:
+  - 23: fej-nyaki HPV-ajánlás;
+  - 40–41, 48–49, 55–56: emlő és fej-nyak a szervlistákban;
+  - 58–59;
+  - 67–69: a rehabilitáció alsorai;
+  - 78–90.
+- A 50. sor B-címkéje ideiglenes: „Innen valamit kitöröltünk?”. A szerkesztői nézetben kérdésként van jelölve.
+- A rehabilitáció nincs szétbontva; a 66. sor ajánlásait mutatja.
+- A projektkártyákon nincs leírás, mert a táblázatban sincs. URL csak ott van, ahol a táblázat megadja.
